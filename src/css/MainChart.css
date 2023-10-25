@@ -1,0 +1,18 @@
+.main-container{
+    position: relative;
+}
+
+.content-container{
+    position: relative;
+    width:98%;
+    aspect-ratio: 2/1;
+    border-radius: 15px;
+    margin:1%;
+}
+
+.flex-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+}

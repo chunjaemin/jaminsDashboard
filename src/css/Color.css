@@ -1,0 +1,23 @@
+.primary-color{
+    background-color: rgb(46, 44, 44);
+}
+
+.primary-theme{
+    background-color: rgb(23, 21, 21);
+}
+
+.primary-white-theme{
+    background-color: rgba(231, 234, 237);
+}
+
+.primary-box{
+    background-color: rgb(23, 21, 21);
+}
+
+primary-text{
+    color:white;
+}
+
+.box-shadow{
+    box-shadow: 1px 1px 3px;
+}

@@ -1,0 +1,309 @@
+
+.flex-column-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container1{
+    width:100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-container2{
+    width:auto;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.first-container{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    height:auto;
+}
+
+.right-card-conatiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-container{
+    display: flex;
+    width:98%;
+    height: 25px;
+}
+
+.input-design{
+    border-radius: 5px;
+    width:85%;
+    height:100%;
+}
+
+.button-design{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width:15%;
+    min-width:60px;
+    height:100%;
+}
+
+.button-text{
+    margin:0;
+    color:black;
+    font-size:15px;
+    font-weight: 550;
+}
+
+.cardview1{
+    margin:1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    width: 98%;
+    aspect-ratio: 2.2/1;
+}
+
+.cardview1-name{
+    width:95%;
+    border-radius: 15px;
+    text-align: center;
+    font-size: calc(10px + 1vmax);
+    margin-top: 11%;
+}
+
+.cardview1-level{
+    width: 95%;
+    border-radius: 15px;
+    text-align: center;
+    font-size: calc(10px + 1vmax);
+    margin-top: 28%;
+}
+
+.cardview2{
+    position: relative;
+    margin:1%;
+    border-radius: 10px;
+    width: 98%;
+    aspect-ratio: 2.2/1;
+}
+
+.cardview2-title{
+    position:absolute;
+    top:3%;
+    left:5%;
+    font-size: calc(10px + 1vmax);
+}
+
+.cardview2-img{
+    position: absolute;
+    top: 18%;
+    left:1%;
+    width:40%;
+    aspect-ratio: 1/1;
+}
+
+.cardview2-tier{
+    position: absolute;
+    top:14%;
+    right:3%;
+    font-size: calc(15px + 1vmax);
+}
+
+.cardview2-win{
+    position: absolute;
+    bottom:30%;
+    right:3%;
+    font-size: calc(10px + 1vmax);
+}
+
+.cardview2-lose{
+    position: absolute;
+    bottom:15%;
+    right:3%;
+    font-size: calc(10px + 1vmax);
+}
+
+.cardview2-rate{
+    position: absolute;
+    bottom:0;
+    right:3%;
+    font-size: calc(10px + 1vmax);
+}
+
+.UserProfile{
+    border-radius: 10px;
+    width:35%;
+    aspect-ratio: 1/1;
+    margin:4%;
+}
+
+.UserStatus-container{
+    width:70%;
+    height:100%;
+}
+
+.name-box{
+    width:100%;
+    height:auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.cardview3{
+    margin:1%;
+    border-radius: 10px;
+    width:98%;
+    aspect-ratio: 5/1;
+}
+
+.cardview3-title{
+    width:100%;
+    text-align: center;
+    margin: 0;
+}
+
+.cardview3-detail{
+    position: relative;
+    width:100%;
+    height:100%;
+}
+
+
+.cardview3-img{
+    aspect-ratio: 1/1;
+    height: 90%;
+    border-radius: 50%;
+    margin: 1%;
+}
+
+.cardview3-positionimg{
+    position:absolute;
+    top:10%;
+    right:3%;
+    height:50%;
+    aspect-ratio: 1/1;
+}
+
+.cardview3-name{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    font-size:calc(12px + 1vw);
+}
+
+.cardview3-win{
+    position: absolute;
+    bottom:5%;
+    left: 20%;
+    font-size: calc(12px + 1vw);
+    margin: 0;
+}
+
+.cardview3-kda{
+    position: absolute;
+    bottom: 0;
+    right: 3%;
+    font-size: calc(16px + 1.4vw);
+    margin: 0;
+}
+
+.cardview5{
+    margin:1%;
+    border-radius: 10px;
+    width:98%;
+    aspect-ratio: 5/2;
+    flex-grow: 1;
+}
+
+.pink{
+    background-color: rgb(245, 75, 115,0.5) !important;
+}
+
+.skyblue{
+    background-color:rgba(131, 230, 252, 0.5) !important;
+}
+
+.cardview6{
+    position: relative;
+    width:100%;
+    aspect-ratio: 2/1;
+    border-radius: 15px;
+    overflow: hidden;
+    margin:0.5%;
+}
+
+
+.cardview6-img{
+    width:100%;
+    height:100%;
+}
+
+.cardview6-title-box{
+    position: absolute;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:calc(20px + 1vw);
+    background-color: #000000;
+    border-radius: 15px;
+    opacity: 0.3;
+}
+
+.cardview6-title{
+    position: absolute;
+    top:0%;
+    left:0%;
+    width:100%;
+    text-align: center;
+    font-size: calc(12px + 0.8vw);
+}
+
+.cardview6-black-box{
+    position: absolute;
+    bottom:3%;
+    left:2%;
+    width:33%;
+    min-width: 220px;
+    aspect-ratio: 2.2/1;
+    background-color: #000000;
+    border-radius: 15px;
+    opacity: 0.3;
+}
+
+.carview6-name{
+    position: absolute;
+    width:12%;
+    bottom:23%;
+    left:3%;
+    font-size: calc(12px + 0.8vw);
+}
+
+.cardview6-level-img{
+    position: absolute;
+    width:12%;
+    bottom:3%;
+    left:2%;
+}
+
+.carview6-level{
+    position: absolute;
+    bottom:15%;
+    left:15%;
+    font-size: calc(12px + 0.8vw);
+}
+
+.carview6-point{
+    position: absolute;
+    bottom:6%;
+    left:15%;
+    font-size: calc(12px + 0.8vw);
+    margin:0;
+}

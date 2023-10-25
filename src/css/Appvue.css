@@ -1,0 +1,136 @@
+.color-theme{
+    background-color: rgb(46, 44, 44);
+}
+
+
+.area-line{
+    border: black 1px solid;
+}
+
+.top-nav-container{
+    display: flex;
+    width:100%;
+    height:50px;
+    border-radius: 5px;
+    margin-bottom:20px;
+    align-items: center;
+}
+
+.left-fixed-container{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:220px;
+    height:100vh;
+    border-radius: 10px;
+}
+
+.main-flex-container{
+    position: relative;
+    width:100%;
+    display:flex;
+    flex-direction: row-reverse;
+    height:100%;
+}
+
+.left-empty-area{
+    width:220px;
+    margin:6px;
+}
+
+.right-container{
+    width:70%;
+    flex-grow:1;
+}
+
+.footer-container{
+    position: relative;
+    width:100%;
+    height:200px;
+}
+
+.top-text{
+    margin:10px;
+    font-size: 17px;
+    font-weight: 1000;
+}
+
+.menu-button{
+    position:absolute;
+    top:5px;
+    right:5px;
+    width:40px;
+    height:40px;
+    cursor: pointer;
+    transition:0.3s;
+}
+
+.menu-button:hover{
+    transform: translateY(-2.5px);
+}
+
+.menu-button > span{
+    display: block;
+    width:70%;
+    height:10%;
+    margin-top:16%;
+    margin-left:15%;
+    border-radius: 15px;
+    transition:0.5s;
+    background-color: white;
+}
+
+.menu-button.active > span:nth-child(1){
+    transform : translateY(10px) rotate(-315deg);
+}
+
+.menu-button.active > span:nth-child(2){
+    opacity : 0;
+}
+
+.menu-button.active > span:nth-child(3){
+    transform : translateY(-10px) rotate(315deg);
+}
+
+.bottom-text{
+    color:rgb(161, 161, 161);
+}
+
+
+
+/**애니메이션 처리**/
+.fade-enter-active,
+.fade-leave-active {
+    transition: 0.3s;
+}
+
+.icon-color{
+    color:white;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+}
+
+.left-enter-active,
+.left-leave-active {
+    transition: 0.5s;
+}
+
+.left-enter-from,
+.left-leave-to {
+    transform: translate(-300px, 0);
+}
+/**애니메이션 처리 끝**/
+.icon-container{
+    color:white;
+    cursor: pointer;
+    transition:0.3s;
+}
+
+.icon-container:hover{
+    transform: translateY(-2.5px);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 54, 0.4);
+}
+

@@ -1,0 +1,98 @@
+.temp-box{
+    display: flex;
+    width:100%;
+    aspect-ratio: 2/1;
+}
+
+.canvas{
+    position: relative;
+    width:80%;
+    height:100%;
+}
+
+.color-box{
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    display:flex;
+    width:100%;
+    height:45px;
+}
+
+.color-icon-container{
+    width:45px;
+    height:100%;
+}
+
+.color-choice-icon{
+    position: absolute;
+    bottom:-6px;
+    left:0;
+    font-size: 35px;
+    aspect-ratio: 1/1;
+    transition: 0.3s;
+}
+
+.color-choice-icon:hover{
+    color:red;
+    transform: translateY(-5px);
+}
+
+.color-choice-container{
+    display: flex;
+    width:90%;
+    height:100%;
+    align-items: center;
+}
+
+.color-choice{
+    width:30px;
+    margin-right: 5px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 1px 2px 4px;
+    transition:0.3s;
+}
+
+.color-choice:hover{
+    transform: translateY(-5px);
+}
+
+.progressbar-container{
+    position:absolute;
+    top:45%;
+    left:0;
+    width:100%;
+    height:auto;
+}
+
+.progressbar-text{
+    color:black;
+    width:100%;
+    text-align: center;
+}
+
+.progressbar{
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 13px;
+}
+
+.swiper {
+    width: 20%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 30%;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height:100%
+  }
