@@ -5,6 +5,7 @@ import Chart from './components/chart/MainChart.vue'
 import LolApi from './components/LolApi/UserStatus.vue'
 import MainThreeJs from './components/ThreeJs/MainThreeJs.vue'
 import GridDrag from './components/GridDrag/GridDragBoard.vue'
+import DrawingAnimation from './components/DrawingAnimation/DrawingMain.vue'
 //라우팅페이지끝
 
 const routes = [
@@ -31,6 +32,11 @@ const routes = [
     path: "/GridDrag",
     name:'GridDrag',
     component: GridDrag,
+  },
+  {
+    path: "/DrawingAnimation",
+    name:'DrawingAnimation',
+    component: DrawingAnimation,
   },
 ];
 

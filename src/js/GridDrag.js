@@ -12,7 +12,7 @@ function startDrag() {
             currentDrag = element;
             currentTop = element.getBoundingClientRect().top
             currentBottom = element.getBoundingClientRect().bottom
-            element.style.border = '1px solid blue'
+            element.style.border = '1px dashed red'
             element.style.opacity = '0.5'
         })
     });
@@ -33,7 +33,8 @@ function startDrag() {
     });
     draggable.forEach(element => {
         element.addEventListener('dragend', (e) => {
-            element.style.opacity = '1'
+            element.style.border='';
+            element.style.opacity = '1';
         })
     });
 }
