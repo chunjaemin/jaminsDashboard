@@ -155,7 +155,7 @@ export default {
                 this.UserName = this.Pre_UserName;
                 axios.get(`https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${this.Pre_UserName}`, {
                     params: {
-                        api_key: 'RGAPI-cec0ef04-d6e1-42f9-8f69-af097b9a3780',
+                        api_key: import.meta.env.VITE_API_KEY,
                     },
                 })
                     .then(result => {
@@ -170,7 +170,7 @@ export default {
         clientInformation() {
             axios.get(`https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/${this.UserId}`, {
                 params: {
-                    api_key: 'RGAPI-cec0ef04-d6e1-42f9-8f69-af097b9a3780',
+                    api_key: import.meta.env.VITE_API_KEY,
                 },
             })
                 .then(result => {
@@ -202,7 +202,7 @@ export default {
         championMastery() {
             axios.get(`https://kr.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${this.UserPid}`, {
                 params: {
-                    api_key: 'RGAPI-cec0ef04-d6e1-42f9-8f69-af097b9a3780',
+                    api_key: import.meta.env.VITE_API_KEY,
                 },
             })
                 .then(result => {
@@ -218,7 +218,7 @@ export default {
             return new Promise((resolve, reject) => {
                 axios.get(`https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${this.UserPid}/ids?type=ranked&start=0&count=1`, {
                     params: {
-                        api_key: 'RGAPI-cec0ef04-d6e1-42f9-8f69-af097b9a3780',
+                        api_key: import.meta.env.VITE_API_KEY,
                     },
                 })
                     .then(result => {
@@ -242,7 +242,7 @@ export default {
             return new Promise((resolve, reject) => {
                 axios.get(`https://asia.api.riotgames.com/lol/match/v5/matches/${this.MatchId}?api_key=RGAPI-cec0ef04-d6e1-42f9-8f69-af097b9a3780`, {
                     params: {
-                        api_key: 'RGAPI-cec0ef04-d6e1-42f9-8f69-af097b9a3780',
+                        api_key: import.meta.env.VITE_API_KEY,
                     },
                 })
                     .then(result => {
