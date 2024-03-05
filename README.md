@@ -1,6 +1,19 @@
-#demo
-https://jaminsdashboard.netlify.app/
+## https://jaminsdashboard.netlify.app/
 
-## Recommended IDE Setup
+23.08 ~ 23.10에 vue를 공부하면서 만들어본 웹사이트입니다.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Vue3 + Vite를 이용해서 만들었습니다. 
+
+공부한 것을 웹사이트에 적용해보기도 하고 배워보고 싶은 것을 이것저것 막 배워서 웹사이트에 욱여넣은 것이라
+웹사이트 컨셉이 안잡혀있기도 하고 디자인도 엉성한데, 겉모습보다는 이런저런 것을 다양하게 만들어 봤다는 것에 초점을 맞춰주시면 감사하겠습니다.
+
+이 웹사이트를 만들면서 다음과 같은 것들을 공부하고 적용시켜보았습니다.
+- SPA구조 만들어보기
+- Riot API(롤) 사용해보기
+- threeJs를 이용해 3D모델 조작해보기
+- drag 이벤트를 직접 구현해보기
+- 스크롤 이벤트 구현해보기
+- vuex를 이용한 전역적 관리 사용해보기
+- 다크모드와 화이트모드 웹사이트 내부 버튼을 통해 가능하도록 구현해보기
+- 메뉴바 토글관리 및 메뉴바 애니메이션 구현해보기
+
