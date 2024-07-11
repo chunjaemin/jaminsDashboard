@@ -3,7 +3,7 @@
         <div class="col-sm-5 col-12">
             <div class="flex-column-container card-container1">
                 <div class="input-container">
-                    <input @change="Pre_UserName = $event.target.value" placeholder="소환사 닉네임을 입력해주세요" class="input-design">
+                    <input @change="Pre_UserName = $event.target.value" placeholder="이름 #태그(미입력시 자동 #KR1)" class="input-design">
                     <button @click="search" class="button-design">
                         <p class="button-text">검색</p>
                     </button>
@@ -79,6 +79,7 @@ export default {
             ChampionIdObject: ChampionIdObject,
             Pre_UserName: '임시 닉네임 보관 변수', //버튼을 눌렀을때 name변수에 할당하기 위해 만든 임시 저장변수
             UserName: '소환사 닉네임',
+            UserTag: '',
             UserProfile: 'https://ddragon.leagueoflegends.com/cdn/13.19.1/img/profileicon/0.png', //프로필 이미지 경로
             UserLevel: '소환사 레벨',
             UserId: '유저 고유 id', //유저이름으로 유저id접근->유저id로 데이터접근
@@ -141,8 +142,19 @@ export default {
             });
         },
 
+        setRealName (name) {
+            const realNameArray = name.split("#")
+            return realNameArray[0]
+        },
+
+        setTag (name) {
+            const realNameArray = name.split("#")
+            return realNameArray[1]
+        },
+
         async search() {//search() 안에있는 각각의 함수는 서로에게 의존성이 있습니다.
-            await this.clientKey(); // clientKey() 끝나는거 기다린 뒤 clientInformation() 실행하도록
+            await this.clientKey1(); //user닉네임 => user의 puuid 찾음
+            await this.clientKey2(); //user의 puuid => user의 암호화된 id + 레벨, 아이콘 찾음
             this.clientInformation();
             this.championMastery();
             await this.searchMatch();
@@ -150,23 +162,41 @@ export default {
             await this.matchInformation();
             this.show = true; //차트on
         },
-        clientKey() {
+        clientKey1() {
             return new Promise((resolve, reject) => {
-                this.UserName = this.Pre_UserName;
-                axios.get(`https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${this.Pre_UserName}`, {
+                
+                this.UserName = this.setRealName(this.Pre_UserName);
+                this.UserTag = this.setTag(this.Pre_UserName);
+                if (this.UserTag == undefined) {this.UserTag = 'KR1'}
+                axios.get(`https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${this.UserName}/${this.UserTag}`, {
                     params: {
                         api_key: import.meta.env.VITE_API_KEY,
                     },
                 })
                     .then(result => {
-                        this.UserId = result.data.id;
-                        this.UserLevel = result.data.summonerLevel;
-                        this.UserProfile = `https://ddragon.leagueoflegends.com/cdn/13.19.1/img/profileicon/${result.data.profileIconId}.png`;
-                        this.UserPid = result.data.puuid;
+                        this.UserPid = result.puuid;
+                        console.log(this.UserPid)
                         resolve()
                     })
             })
         },
+
+        clientKey2() {
+            return new Promise((resolve, reject) => {
+                axios.get(`https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${this.UserPid}`, {
+                    params: {
+                        api_key: import.meta.env.VITE_API_KEY,
+                    },
+                })
+                    .then(result => {
+                        this.UserId = result.id;
+                        this.UserLevel = result.summonerLevel;
+                        this.UserProfile = `https://ddragon.leagueoflegends.com/cdn/13.19.1/img/profileicon/${result.profileIconId}.png`;
+                        resolve()
+                    })
+            })
+        },
+
         clientInformation() {
             axios.get(`https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/${this.UserId}`, {
                 params: {
