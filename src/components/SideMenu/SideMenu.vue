@@ -25,9 +25,9 @@ export default {
     },
     data(){
         return {
-            name : ['LolApi','3DModel','Chart','Drag and Grid','SideMenu3','SideMenu4'],
-            to : ['/LolApi','/ThreeJs','/chart','/GridDrag','/chart','/chart'],
-            icons : ["bi bi-controller",'bi bi-badge-3d',"bi bi-graph-up-arrow",'bi-alarm','bi-alarm','bi-alarm'],
+            name : ['LolApi','3DModel','Chart','Drag and Grid'],
+            to : ['/LolApi','/ThreeJs','/chart','/GridDrag'],
+            icons : ["bi bi-controller",'bi bi-badge-3d',"bi bi-graph-up-arrow",'bi-alarm'],
         }
     },
     components: {},
